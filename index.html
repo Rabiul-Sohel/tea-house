@@ -10,6 +10,13 @@
       <link
          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
          rel="stylesheet" />
+      <!-- Font Awesome link -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer" />
       <!-- tailwind link -->
       <link
          href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css"
@@ -18,26 +25,59 @@
       <script src="https://cdn.tailwindcss.com"></script>
       <!-- Tailwind custom color -->
       <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
-          }
-        }
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     "custom-dark": "#1C1C1C",
+                     "des-gray": "#777",
+                     "foot-gray": "#494949",
+                  },
+                  backgroundImage: {
+                     "custom-gradient":
+                        "linear-gradient(270deg, #F00 0%, #FF8938 100%)",
+                  },
+               },
+            },
+         };
       </script>
       <style>
-        .font-manrope{
-          font-family: 'Manrope', sans-serif;
-        }
+         .font-manrope {
+            font-family: "Manrope", sans-serif;
+         }
       </style>
    </head>
    <body class="font-manrope">
-      <header class="text-5xl font-extrabold">
-       <h1>It's good 
-        tea time at The Tea House</h1>
+      <header class="container mx-auto px-8 py-8 my-5">
+         <div class="hero bg-base-0">
+            <div class="hero-content flex-col lg:flex-row-reverse items-start gap-10">
+               <div class="mt-[20px]">
+                  <img src="/images/banner.png" class="" />
+                  <div class="flex items-center gap-4 bg-white drop-shadow-md -mt-28 p-6 w-64 justify-center ml-[100px] rounded-xl">
+                    <i class="fa-solid fa-star text-3xl text-amber-400"></i>
+                    <div>
+                      <h3 class="text-3xl">5.00</h3>
+                      <p>Trust Pilot Ratings</p>
+                    </div>
+                  </div>
+               </div>
+               <div class="">
+                  <h1 class="text-4xl md:text-7xl font-extrabold text-custom-dark">
+                     It's good <br />
+                     tea time at The <br />
+                     Tea House
+                  </h1>
+                  <p class="py-6 text-des-gray">
+                     Tea and Botanical Solutions Supplier Give Optimum
+                     Satisfaction To Your Taste Buds.
+                  </p>
+                  <button class="btn bg-custom-gradient text-white text-lg p-5 h-auto">
+                     Explore More
+                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </button>
+               </div>
+            </div>
+         </div>
       </header>
    </body>
 </html>
